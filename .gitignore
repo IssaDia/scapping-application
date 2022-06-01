@@ -3,9 +3,11 @@ node_modules
 /dist
 
 
+
 # local env files
 .env.local
 .env.*.local
+/backend/.env
 
 # Log files
 npm-debug.log*
