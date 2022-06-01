@@ -14,13 +14,14 @@
   },
   "devDependencies": {
     "eslint": "^8.16.0",
-    "eslint-plugin-prettier": "^4.0.0"
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^28.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.bundle.js",
     "build": "webpack",
     "dev": "nodemon ./server.js localhost 3080",
+    "test": "jest",
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
     "lint:check": "eslint .",
