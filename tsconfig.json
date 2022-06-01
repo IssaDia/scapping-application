@@ -6,6 +6,7 @@
     "strict": true,
     // si vous utilisez webpack 2+ ou rollup, permettre le tree shaking :
     "module": "es2015",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "jsx": "preserve"
   }
 }
