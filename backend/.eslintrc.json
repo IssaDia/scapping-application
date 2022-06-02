@@ -3,7 +3,7 @@
   "plugins": ["prettier"],
   "rules": {
     "eqeqeq": "error",
-    "no-console": "warn",
+    "no-console": "off",
     "prettier/prettier": "error"
   },
   "parserOptions": {
