@@ -1,4 +1,3 @@
-import { defineComponent } from '@vue/composition-api';
 <template>
   <form class="m-4 flex">
     <input
@@ -12,18 +11,22 @@ import { defineComponent } from '@vue/composition-api';
     >
       Search
     </button>
+    <loader-component></loader-component>
   </form>
 </template>
 
 <script>
 import { defineComponent } from "vue";
+import LoaderComponent from "../Loader/LoaderComponent.vue";
 
 const baseURL = "http://localhost:3000/api";
 export default defineComponent({
+  components: { LoaderComponent },
   methods: {
     async retrieveData() {
       const companyName = this.$refs.get_company_name.value;
       this.$store.commit("setLoading", true);
+      console.log(this.$store.state.isLoading);
       await fetch(`${baseURL}/search/${companyName}`)
         .then((response) => response.json())
         .then((data) => {
@@ -31,7 +34,7 @@ export default defineComponent({
           this.$store.commit("setSiren", data.siren[0]);
           this.$store.commit("setLoading", false);
 
-          console.log(data);
+          console.log(data, this.$store.state.isLoading);
         })
         .catch((error) => console.log(error));
     },

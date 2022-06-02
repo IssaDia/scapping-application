@@ -1,5 +1,6 @@
 <template>
-  <div class="flex flex-col">
+  <div v-if="getName" class="flex flex-col">
+    <h1 v-if="isLoading">test</h1>
     <div class="bg-white shadow-md rounded-3xl p-4">
       <div class="flex flex-col">
         <div class="h-full w-full lg:h-24 lg:w-48 lg:mb-0 mb-3"></div>
@@ -30,6 +31,7 @@ export default defineComponent({
     return {
       name: this.$store.name,
       siren: this.$store.siren,
+      loading: this.$store.loading,
     };
   },
   computed: {
@@ -39,8 +41,8 @@ export default defineComponent({
     getSiren() {
       return this.$store.state.siren;
     },
-    status() {
-      return this.$store.state.loading;
+    isLoading() {
+      return this.$store.state.isLoading;
     },
   },
 });

@@ -8,7 +8,7 @@ const store = createStore({
     return {
       name: "",
       siren: "",
-      loading: false,
+      isLoading: false,
     };
   },
   mutations: {
@@ -19,7 +19,7 @@ const store = createStore({
       state.siren = siren;
     },
     setLoading(state, status) {
-      state.status = status;
+      state.isLoading = status;
     },
   },
 });
