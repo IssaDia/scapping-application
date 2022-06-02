@@ -1,4 +1,4 @@
-<script></script>
+import { defineComponent } from '@vue/composition-api';
 <template>
   <form class="m-4 flex">
     <input
@@ -13,22 +13,37 @@
       Search
     </button>
   </form>
+  <p v-if="companyName">{{ companyName }}</p>
+  <p v-else>Oh no 😢</p>
 </template>
+
 <script>
+import { defineComponent } from "vue";
+
 const baseURL = "http://localhost:3000/api";
-export default {
+export default defineComponent({
   data() {
     return {
-      name: "",
+      name: this.$store.name,
     };
+  },
+  computed: {
+    companyName() {
+      return this.$store.state.name;
+    },
   },
   methods: {
     async retrieveData() {
       const companyName = this.$refs.get_company_name.value;
-      await fetch(`${baseURL}/searchv2/${companyName}`)
-        .then((response) => console.log(response.json()))
-        .then((data) => (this.data.name = data.name));
+
+      await fetch(`${baseURL}/search/${companyName}`)
+        .then((response) => response.json())
+        .then((data) => {
+          this.$store.commit("setName", data.name);
+          console.log(data.name);
+        })
+        .catch((error) => console.log(error));
     },
   },
-};
+});
 </script>
