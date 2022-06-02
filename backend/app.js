@@ -27,10 +27,25 @@ app.get("/api/search/:company", async (req, res) => {
 
   axios
     .get(URL)
-    .then((response) => {
-      const $ = cheerio.load(response.data);
-      const name = $("#recap_deno_search").text();
-      res.json({ name });
+    .then(async (response) => {
+      const $ = await cheerio.load(response.data);
+      const firstBlockData = $(
+        "div#result_doc > .ResultBloc__link > div > .ResultBloc__link__content"
+      ).first();
+
+      const name = firstBlockData
+        .find(".extract > p.txt > span.highlight")
+        .first()
+        .text()
+        .trim();
+      const siren = firstBlockData
+        .find(".extract > p.txt")
+        .first()
+        .text()
+        .match(/[0-9]{3} [0-9]{3} [0-9]{3}/);
+
+      console.log(firstBlockData.html());
+      res.json({ name, siren });
     })
     .catch((error) => console.log(error));
 });

@@ -13,8 +13,6 @@ import { defineComponent } from '@vue/composition-api';
       Search
     </button>
   </form>
-  <p v-if="companyName">{{ companyName }}</p>
-  <p v-else>Oh no 😢</p>
 </template>
 
 <script>
@@ -22,25 +20,18 @@ import { defineComponent } from "vue";
 
 const baseURL = "http://localhost:3000/api";
 export default defineComponent({
-  data() {
-    return {
-      name: this.$store.name,
-    };
-  },
-  computed: {
-    companyName() {
-      return this.$store.state.name;
-    },
-  },
   methods: {
     async retrieveData() {
       const companyName = this.$refs.get_company_name.value;
-
+      this.$store.commit("setLoading", true);
       await fetch(`${baseURL}/search/${companyName}`)
         .then((response) => response.json())
         .then((data) => {
           this.$store.commit("setName", data.name);
-          console.log(data.name);
+          this.$store.commit("setSiren", data.siren[0]);
+          this.$store.commit("setLoading", false);
+
+          console.log(data);
         })
         .catch((error) => console.log(error));
     },

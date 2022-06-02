@@ -7,11 +7,19 @@ const store = createStore({
   state() {
     return {
       name: "",
+      siren: "",
+      loading: false,
     };
   },
   mutations: {
     setName(state, name) {
       state.name = name;
+    },
+    setSiren(state, siren) {
+      state.siren = siren;
+    },
+    setLoading(state, status) {
+      state.status = status;
     },
   },
 });
