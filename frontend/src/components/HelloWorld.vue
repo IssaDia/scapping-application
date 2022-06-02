@@ -1,14 +1,9 @@
 <template>
-  <button
-    class="btn btn-primary"
-    data-bs-target="#collapseTarget"
-    data-bs-toggle="collapse"
-  >
-    Bootstrap collapse
-  </button>
-  <div id="collapseTarget" class="collapse py-2">
-    This is the toggle-able content!
-  </div>
+  <b-container>
+    <b-row>
+      <b-col></b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
