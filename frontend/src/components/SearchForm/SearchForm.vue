@@ -26,7 +26,7 @@ export default {
     async retrieveData() {
       const companyName = this.$refs.get_company_name.value;
       await fetch(`${baseURL}/searchv2/${companyName}`)
-        .then((response) => console.log(response.json()))
+        .then((response) => response.json())
         .then((data) => (this.data.name = data.name));
     },
   },

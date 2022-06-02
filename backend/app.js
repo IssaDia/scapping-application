@@ -2,17 +2,18 @@ require("dotenv").config();
 
 const cheerio = require("cheerio");
 let puppeteer = require("puppeteer");
-const pretty = require("pretty");
 const axios = require("axios");
 
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 const app = express();
 
 const port = 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.json({ message: "working" });
