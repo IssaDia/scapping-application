@@ -1,14 +1,24 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="container-fluid">
+    <div class="flex flex-col items-center h-screen space-y-8">
+      <app-title title="My Scrapping App!"></app-title>
+      <search-form></search-form>
+      <company-card></company-card>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import AppTitle from "./components/AppTitle/AppTitle.vue";
+import SearchForm from "./components/SearchForm/SearchForm.vue";
+import CompanyCard from "./components/Company/CompanyCard.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    AppTitle,
+    SearchForm,
+    CompanyCard,
   },
 };
 </script>

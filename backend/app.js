@@ -1,4 +1,4 @@
-require("dotenv").config;
+require("dotenv").config();
 
 const cheerio = require("cheerio");
 const pretty = require("pretty");
@@ -23,28 +23,29 @@ app.get("/", (req, res) => {
 
 app.get("/api/search/:company", async (req, res) => {
   const company = req.params.company;
-  const URL_LOGIN = 'https://www.linkedin.com/login/fr';
-  const EMAIL_SELECTOR = '#username';
-  const PASSWORD_SELECTOR = '#password';
-  const SUBMIT_SELECTOR = ".btn__primary--large from__button--floating";
+  const URL_LOGIN = "https://www.linkedin.com/login/fr";
+  const EMAIL_SELECTOR = "#username";
+  const PASSWORD_SELECTOR = "#password";
+  const SUBMIT_SELECTOR = "div#app__container > main.app__content > div.card-layout > div#organic-div > form.login__form > div.login__form_action_container > button.btn__primary--large.from__button--floating";
 
-  if(process.argv[2] !== undefined) {
+  if (company !== undefined) {
     (() => {
       puppeteer
-        .launch({ headless: true })
+        .launch({ headless: false })
         .then(async (browser) => {
           let page = await browser.newPage();
           page.setViewport({ width: 1366, height: 768 });
-          await page.goto(LINKEDIN_LOGIN_URL, {
+          await page.goto(URL_LOGIN, {
             waitUntil: "domcontentloaded",
           });
           await page.click(EMAIL_SELECTOR);
-          await page.keyboard.type("issadiapro@gmail.com");
+          await page.keyboard.type(process.env.LINKEDIN_USERNAME);
           await page.click(PASSWORD_SELECTOR);
-          await page.keyboard.type("Il@123");
+          await page.keyboard.type(process.env.LINKEDIN_PASSWORD);
           await page.click(SUBMIT_SELECTOR);
+          await page.waitForNavigation();
           page
-            .goto(`https://www.linkedin.com/company/${process.argv[2]}/about`, {
+            .goto(`https://www.linkedin.com/company/${company}/about/`, {
               waitUntil: "domcontentloaded",
             })
             .then(() => {
@@ -69,19 +70,16 @@ app.get("/api/search/:company", async (req, res) => {
     })();
   }
 
-  
-  await axios(url)
-    .then(response => {
-       const html_data = response.data;
-       const $ = cheerio.load(html_data);
-       const siren = $(".org-top-card__primary-content--ia");
+  // await axios(url)
+  //   .then((response) => {
+  //     const html_data = response.data;
+  //     const $ = cheerio.load(html_data);
+  //     const siren = $(".org-top-card__primary-content--ia");
 
-
-      console.log(siren.html());
-    })
-    .catch(error => console.log(error));
-
-})
+  //     console.log(siren.html());
+  //   })
+  //   .catch((error) => console.log(error));
+});
 
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
