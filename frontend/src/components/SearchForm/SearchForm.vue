@@ -2,6 +2,7 @@
 <template>
   <form class="m-4 flex">
     <input
+      ref="get_company_name"
       class="rounded-l-lg p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white"
       placeholder="name of the company"
     />
@@ -14,10 +15,19 @@
   </form>
 </template>
 <script>
+const baseURL = "http://localhost:3000/api";
 export default {
+  data() {
+    return {
+      name: "",
+    };
+  },
   methods: {
-    retrieveData() {
-      alert("Did something!");
+    async retrieveData() {
+      const companyName = this.$refs.get_company_name.value;
+      await fetch(`${baseURL}/searchv2/${companyName}`)
+        .then((response) => console.log(response.json()))
+        .then((data) => (this.data.name = data.name));
     },
   },
 };
