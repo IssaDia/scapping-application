@@ -19,7 +19,7 @@ _Display a web page with dynamic scrapped informations about a given company_
 
 ## Methodology
 
-I chose to use a Github to manage my code with a Kanban to list and manage the different issues in order to complete the test.
+I chose to use a Github to manage my code with a Kanban to list and manage the different issues in order to complete the this project.
 
 ## Technical stack
 
