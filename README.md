@@ -10,7 +10,6 @@ A fullstack application which scrap company informations from a website and disp
 -   [Why this choice](#why-this-choice)
 -   [Technical watch](#technical-watch)
 -   [Biggest challenges for this project](#biggest-challenges-for-this-project)
--   [To improve](#to-improve)
 -   [Feedback](#feedback)
 
 -   [How to run this app](#-how-to-run-this-app)
@@ -20,6 +19,7 @@ A fullstack application which scrap company informations from a website and disp
 -   [Run on Back End](#-run-on-back-end)
 -   [Run Test](#-run-tests)
 -   [Build with](#-build-with)
+-   [To improve](#-to-improve)
 
 
 ## Goal
@@ -65,12 +65,6 @@ A Guide to Web Scraping with Node.js : https://www.youtube.com/watch?v=dXjKh66BR
 - couldn't get the right selector on societe.com at first
 - bootstrap couldn't be setup on Vue 3
 - couldn't connect to linkedin.com with puppeteer because of verification
-
-## To improve
-
-- give the opportunity to retrieve more company informations
-- deploy the app
-- improve frontend interface
 
 ## Feedback
 
@@ -147,3 +141,9 @@ npm test
 -   [Typescript](https://fr.vuejs.org/v2/guide/typescript.html)
 -   [Tailwind CSS](https://tailwindcss.com/docs/guides/vite)
 -   [Cheerios](https://cheerio.js.org/)
+
+# 📑 To do
+
+- give the opportunity to retrieve more company informations
+- deploy the app
+- improve frontend interface
