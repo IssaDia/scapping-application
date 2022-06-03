@@ -13,6 +13,15 @@ A fullstack application which scrap company informations from a website and disp
 -   [To improve](#to-improve)
 -   [Feedback](#feedback)
 
+-   [How to run this app](#-how-to-run-this-app)
+-   [Node Package Manager](#-node-package-manager)
+-   [Install packages](#-install-packages)
+-   [Run on Front End](#-run-on-front-end)
+-   [Run on Back End](#-run-on-back-end)
+-   [Run Test](#-run-tests)
+-   [Build with](#-build-with)
+
+
 ## Goal
 
 _Display a web page with dynamic scrapped informations about a given company_
@@ -42,13 +51,6 @@ I plan to chose the same stack ad the company that i do the test for in order to
 I plan to chose the same stack ad the company that i do the test for in order to be close to the tasks i could be asked on the job and also to improve my skills.
 
 ## Technical watch
-
-Documentation :
-
-Vue : https://cli.vuejs.org/guide/creating-a-project.html
-Typescript with Vue : https://fr.vuejs.org/v2/guide/typescript.html
-Tailwind CSS: https://tailwindcss.com/docs/guides/vite
-Cheerios : https://cheerio.js.org/
 
 Articles :
 
@@ -84,3 +86,64 @@ and practice Vue again :
 - use a CSS library
 - use Vuex to do state management
 - consuming data from api
+
+## 👨🏽‍💻 How to run this app
+
+### 📦 Node Package Manager
+
+In order to install packages and run this application, you will need [Node Package Manager](https://docs.npmjs.com/) v6.14.15 or higher
+
+To check if the Node versions is the correct: 
+
+```
+node --version
+```
+
+Personally i used node v14.17.2
+
+### 📥 Install packages
+
+To install all the node_modules packages:
+
+```
+npm install or npm i
+```
+
+### ♻️ Run on Front End
+
+To run on Development mode:
+
+go to /frontend folder then :
+
+```
+npm run serve
+```
+then go to : http://localhost:8080/
+
+
+### ♻️ Run on Back End
+
+To run on Development mode:
+
+go to /backend folder then :
+
+```
+nodemon app.js
+```
+
+### 🧪 Run Tests
+
+To run tests:
+
+```
+npm test
+```
+
+## 🏗 Built with
+
+-   [Node](https://nodejs.org/en/)
+-   [Express](https://expressjs.com/)
+-   [Vue](https://cli.vuejs.org/guide/creating-a-project.html)
+-   [Typescript](https://fr.vuejs.org/v2/guide/typescript.html)
+-   [Tailwind CSS](https://tailwindcss.com/docs/guides/vite)
+-   [Cheerios](https://cheerio.js.org/)
