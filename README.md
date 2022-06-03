@@ -4,7 +4,7 @@ A fullstack application which scrap company informations from a website and disp
 
 # 📜 Summary
 
-- [Goal] (#-goal)
+- [Goal] (#goal)
 
 ### Goal
 
@@ -37,7 +37,6 @@ I plan to chose the same stack ad the company that i do the test for in order to
 - Postman
 - EsLint
 - TailwindCSS
--
 
 ### Why this choice?
 
