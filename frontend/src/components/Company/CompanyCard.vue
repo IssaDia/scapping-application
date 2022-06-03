@@ -1,6 +1,5 @@
 <template>
   <div v-if="getName" class="flex flex-col">
-    <h1 v-if="isLoading">test</h1>
     <div class="bg-white shadow-md rounded-3xl p-4">
       <div class="flex flex-col">
         <div class="h-full w-full lg:h-24 lg:w-48 lg:mb-0 mb-3"></div>
