@@ -17,7 +17,7 @@ A fullstack application which scrap company informations from a website and disp
 -   [Install packages](#-install-packages)
 -   [Run on Front End](#-run-on-front-end)
 -   [Run on Back End](#-run-on-back-end)
--   [Run Test](#-run-tests)
+-   [Run Tests](#-run-tests)
 -   [Build with](#-build-with)
 -   [To improve](#-to-improve)
 
