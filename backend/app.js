@@ -1,7 +1,6 @@
 require("dotenv").config();
 
 const { data } = require("./routes/data");
-const { index } = require("./routes/index");
 
 const express = require("express");
 const app = express();
@@ -17,10 +16,6 @@ if (process.env.NODE_ENV !== "production") {
   app.use(cors());
 }
 
-app.get("/", (req, res) => {
-  index(req, res);
-});
-
 app.get("/api/search/:company", async (req, res) => {
   await data(req, res);
 });
@@ -28,3 +23,5 @@ app.get("/api/search/:company", async (req, res) => {
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
 });
+
+module.exports = app;
