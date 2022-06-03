@@ -139,7 +139,7 @@ npm test
 - [Vue](https://cli.vuejs.org/guide/creating-a-project.html)
 - [Typescript](https://fr.vuejs.org/v2/guide/typescript.html)
 - [Tailwind CSS](https://tailwindcss.com/docs/guides/vite)
-- [Cheerios](https://cheerio.js.org/)
+- [Cheerio](https://cheerio.js.org/)
 
 ## 📑 To improve
 
