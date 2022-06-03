@@ -101,6 +101,7 @@ To install all the node_modules packages:
 ```
 npm install or npm i
 ```
+on both /frontend and /backend folders
 
 ### ♻️ Run on Front End
 
