@@ -4,7 +4,7 @@ A fullstack application which scrap company informations from a website and disp
 
 # 📜 Summary
 
-- [Goal] (#goal)
+- [Goal](#goal)
 
 ### Goal
 
