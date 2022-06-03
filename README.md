@@ -1,26 +1,25 @@
-# 🖥 My scrapping App
+# 🖥 Scrappy
 
 A fullstack application which scrap company informations from a website and displays it. Configured it with VueJs, TailwindCss, NodeJs, Express, Jest, Git, EsLint, Axios
 
 # 📜 Summary
 
--   [Goal](#goal)
--   [Methodology](#methodology)
--   [Technical stack](#technical-stack)
--   [Why this choice](#why-this-choice)
--   [Technical watch](#technical-watch)
--   [Biggest challenges for this project](#biggest-challenges-for-this-project)
--   [Feedback](#feedback)
+- [Goal](#goal)
+- [Methodology](#methodology)
+- [Technical stack](#technical-stack)
+- [Why this choice](#why-this-choice)
+- [Technical watch](#technical-watch)
+- [Biggest challenges for this project](#biggest-challenges-for-this-project)
+- [Feedback](#feedback)
 
--   [How to run this app](#-how-to-run-this-app)
--   [Node Package Manager](#-node-package-manager)
--   [Install packages](#-install-packages)
--   [Run on Front End](#-run-on-front-end)
--   [Run on Back End](#-run-on-back-end)
--   [Run Tests](#-run-tests)
--   [Build with](#-build-with)
--   [To improve](#-to-improve)
-
+- [How to run this app](#-how-to-run-this-app)
+- [Node Package Manager](#-node-package-manager)
+- [Install packages](#-install-packages)
+- [Run on Front End](#-run-on-front-end)
+- [Run on Back End](#-run-on-back-end)
+- [Run Tests](#-run-tests)
+- [Build with](#-build-with)
+- [To improve](#-to-improve)
 
 ## Goal
 
@@ -28,7 +27,7 @@ _Display a web page with dynamic scrapped informations about a given company_
 
 ## Methodology
 
-I chose to use a Github to manage my code with a Kanban to list and manage the different issues in order to complete the this project.
+I chose to use a Github to manage my code with a Kanban here(https://github.com/IssaDia/scapping-Application/projects/1) to list and manage the different issues in order to complete the this project.
 
 ## Technical stack
 
@@ -87,7 +86,7 @@ and practice Vue again :
 
 In order to install packages and run this application, you will need [Node Package Manager](https://docs.npmjs.com/) v6.14.15 or higher
 
-To check if the Node versions is the correct: 
+To check if the Node versions is the correct:
 
 ```
 node --version
@@ -112,8 +111,8 @@ go to /frontend folder then :
 ```
 npm run serve
 ```
-then go to : http://localhost:8080/
 
+then go to : http://localhost:8080/
 
 ### ♻️ Run on Back End
 
@@ -135,15 +134,16 @@ npm test
 
 ## 🏗 Built with
 
--   [Node](https://nodejs.org/en/)
--   [Express](https://expressjs.com/)
--   [Vue](https://cli.vuejs.org/guide/creating-a-project.html)
--   [Typescript](https://fr.vuejs.org/v2/guide/typescript.html)
--   [Tailwind CSS](https://tailwindcss.com/docs/guides/vite)
--   [Cheerios](https://cheerio.js.org/)
+- [Node](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+- [Vue](https://cli.vuejs.org/guide/creating-a-project.html)
+- [Typescript](https://fr.vuejs.org/v2/guide/typescript.html)
+- [Tailwind CSS](https://tailwindcss.com/docs/guides/vite)
+- [Cheerios](https://cheerio.js.org/)
 
-# 📑 To do
+## 📑 To improve
 
 - give the opportunity to retrieve more company informations
 - deploy the app
 - improve frontend interface
+- e2e Tests

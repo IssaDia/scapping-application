@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="flex flex-col items-center h-screen space-y-8">
-      <app-title title="My Scrapping App!"></app-title>
+      <app-title title="Scrappy"></app-title>
       <search-form></search-form>
       <company-card></company-card>
     </div>
