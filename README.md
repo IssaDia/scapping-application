@@ -35,11 +35,11 @@ I chose to use a Github to manage my code with a Kanban [here](https://github.co
 - [Node](https://nodejs.org/en/)
 - [Express](https://expressjs.com/)
 - [Vue](https://cli.vuejs.org/guide/creating-a-project.html)
-- [Vuex](https://nodejs.org/en/](https://vuex.vuejs.org/guide/#the-simplest-store)
+- [Vuex](https://vuex.vuejs.org/guide/#the-simplest-store)
 - [Typescript](https://fr.vuejs.org/v2/guide/typescript.html)
 - [Tailwind CSS](https://tailwindcss.com/docs/guides/vite)
 - [Cheerio](https://cheerio.js.org/) 
-- [Jest](https://expressjs.com/](https://github.com/vuejs/vue-jest)
+- [Jest](https://github.com/vuejs/vue-jest)
 - [Supertest](https://www.npmjs.com/package/supertest)
 
 ## My code environnement and utils
