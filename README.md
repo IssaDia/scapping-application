@@ -147,3 +147,4 @@ npm run test
 - improve frontend interface
 - e2e Tests
 - more unit tests
+- add github actions to automate tests and deployment
