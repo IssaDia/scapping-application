@@ -1,7 +1,7 @@
 const cheerio = require("cheerio");
 const axios = require("axios");
 
-const data = (req, res) => {
+const getCompanyDataFromWebsite = (req, res) => {
   const company = req.params.company;
   const URL = `https://www.societe.com/cgi-bin/search?champs=${company}`;
 
@@ -29,4 +29,4 @@ const data = (req, res) => {
     .catch((error) => console.log(error));
 };
 
-module.exports = { data };
+module.exports = { getCompanyDataFromWebsite };

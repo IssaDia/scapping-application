@@ -1,11 +1,13 @@
 require("dotenv").config();
 
-const { data } = require("./routes/data");
-
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
+
+const {
+  getCompanyDataFromWebsite,
+} = require("./utils/getCompanyDataFromWebsite");
 
 const port = 3000;
 
@@ -16,8 +18,8 @@ if (process.env.NODE_ENV !== "production") {
   app.use(cors());
 }
 
-app.get("/api/search/:company", async (req, res) => {
-  await data(req, res);
+app.get("/api/search/:company", (req, res) => {
+  getCompanyDataFromWebsite(req, res);
 });
 
 app.listen(port, () => {
