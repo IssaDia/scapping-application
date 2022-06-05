@@ -18,14 +18,12 @@ if (process.env.NODE_ENV !== "production") {
   app.use(cors());
 }
 
-app.get("/", (req, res) => {
-  res.json({ message: "working" });
-});
-
-app.get("/api/search/:company", async (req, res) => {
+app.get("/api/search/:company", (req, res) => {
   getCompanyDataFromWebsite(req, res);
 });
 
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
 });
+
+module.exports = app;
