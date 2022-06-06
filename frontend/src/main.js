@@ -9,6 +9,7 @@ const store = createStore({
       name: "",
       siren: "",
       isLoading: false,
+      isError: false,
     };
   },
   mutations: {
@@ -20,6 +21,9 @@ const store = createStore({
     },
     setLoading(state, status) {
       state.isLoading = status;
+    },
+    setIsError(state, status) {
+      state.isError = status;
     },
   },
 });

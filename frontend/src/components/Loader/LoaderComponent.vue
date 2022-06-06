@@ -1,6 +1,6 @@
 <template>
-  <div v-if="isLoading" class="loader-wrapper">
-    <div class="loader">
+  <div v-if="isLoading" class="loader-wrapper text-center">
+    <div class="loader w-10 h-10">
       <div></div>
       <div></div>
       <div></div>
@@ -12,11 +12,6 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  data() {
-    return {
-      loading: this.$store.state.isLoading,
-    };
-  },
   computed: {
     isLoading() {
       return this.$store.state.isLoading;
@@ -25,20 +20,6 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-p {
-  font-size: 0.8em;
-  font-weight: 300;
-  margin-top: 5px;
-  letter-spacing: 1px;
-  color: rgb(82, 82, 82);
-}
-.loader-wrapper {
-  text-align: center;
-}
-.loader {
-  width: 40px;
-  height: 40px;
-}
 .loader div {
   box-sizing: border-box;
   display: block;
