@@ -24,14 +24,8 @@
 </template>
 <script>
 import { defineComponent } from "@vue/composition-api";
+
 export default defineComponent({
-  data() {
-    return {
-      name: this.$store.name,
-      siren: this.$store.siren,
-      loading: this.$store.loading,
-    };
-  },
   computed: {
     getName() {
       return this.$store.state.name;
@@ -39,8 +33,8 @@ export default defineComponent({
     getSiren() {
       return this.$store.state.siren;
     },
-    isLoading() {
-      return this.$store.state.isLoading;
+    isError() {
+      return this.$store.state.isError;
     },
   },
 });

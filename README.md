@@ -6,7 +6,8 @@ A fullstack application which scrap company informations from a website and disp
 
 - [Goal](#goal)
 - [Methodology](#methodology)
-- [Technical stack](#technical-stack)
+- [Build with](#-build-with)
+- [My code environnement and utils](#-my-code-environnement-and-utils)
 - [Why this choice](#why-this-choice)
 - [Technical watch](#technical-watch)
 - [Biggest challenges for this project](#biggest-challenges-for-this-project)
@@ -18,36 +19,41 @@ A fullstack application which scrap company informations from a website and disp
 - [Run on Front End](#-run-on-front-end)
 - [Run on Back End](#-run-on-back-end)
 - [Run Tests](#-run-tests)
-- [Build with](#-build-with)
 - [To improve](#-to-improve)
 
 ## Goal
 
-_Display a web page with dynamic scrapped informations about a given company_
+_Display a dynamic web page with scrapped informations about a given company_
 
 ## Methodology
 
-I chose to use a Github to manage my code with a Kanban here(https://github.com/IssaDia/scapping-Application/projects/1) to list and manage the different issues in order to complete the this project.
+I chose to use a Github to manage my code with a Kanban [here](https://github.com/IssaDia/scapping-Application/projects/1) to list and manage the different issues in order to complete the this project.
 
-## Technical stack
 
-I plan to chose the same stack ad the company that i do the test for in order to be close to the tasks i could be asked on the job and also to improve my skills.
+## 🏗 Built with
 
-- Vue 3
-- Vuex
-- Typescript
-- Node Js
-- Cheerio
-- NPM
-- Jest
+- [Node](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+- [Vue](https://cli.vuejs.org/guide/creating-a-project.html)
+- [Vuex](https://vuex.vuejs.org/guide/#the-simplest-store)
+- [Typescript](https://fr.vuejs.org/v2/guide/typescript.html)
+- [Tailwind CSS](https://tailwindcss.com/docs/guides/vite)
+- [Cheerio](https://cheerio.js.org/) 
+- [Jest](https://github.com/vuejs/vue-jest)
+- [Supertest](https://www.npmjs.com/package/supertest)
+
+## My code environnement and utils
+
 - VsCode
-- Postman
+- MacOs
+- NPM
 - EsLint
-- TailwindCSS
+- Prettier
+- Postman
 
 ## Why this choice?
 
-I plan to chose the same stack ad the company that i do the test for in order to be close to the tasks i could be asked on the job and also to improve my skills.
+I chose a stack on par with the one the company is using in order to be close to the tasks i could be asked on the job and also to improve my skills.
 
 ## Technical watch
 
@@ -86,7 +92,7 @@ and practice Vue again :
 
 In order to install packages and run this application, you will need [Node Package Manager](https://docs.npmjs.com/) v6.14.15 or higher
 
-To check if the Node versions is the correct:
+To check if your Node version is correct:
 
 ```
 node --version
@@ -101,6 +107,7 @@ To install all the node_modules packages:
 ```
 npm install or npm i
 ```
+on both /frontend and /backend folders
 
 ### ♻️ Run on Front End
 
@@ -129,17 +136,9 @@ nodemon app.js
 To run tests:
 
 ```
-npm test
+npm run test
 ```
 
-## 🏗 Built with
-
-- [Node](https://nodejs.org/en/)
-- [Express](https://expressjs.com/)
-- [Vue](https://cli.vuejs.org/guide/creating-a-project.html)
-- [Typescript](https://fr.vuejs.org/v2/guide/typescript.html)
-- [Tailwind CSS](https://tailwindcss.com/docs/guides/vite)
-- [Cheerios](https://cheerio.js.org/)
 
 ## 📑 To improve
 
@@ -147,3 +146,7 @@ npm test
 - deploy the app
 - improve frontend interface
 - e2e Tests
+- more unit tests
+- add github actions to automate tests and deployment
+- -handle request errors on frontend
+- refacto of getData function to handle more infos
