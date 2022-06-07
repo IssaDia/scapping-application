@@ -148,5 +148,3 @@ npm run test
 - e2e Tests
 - more unit tests
 - add github actions to automate tests and deployment
-- -handle request errors on frontend
-- refacto of getData function to handle more infos
