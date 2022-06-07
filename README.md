@@ -7,7 +7,7 @@ A fullstack application which scrap company informations from a website and disp
 - [Goal](#goal)
 - [Methodology](#methodology)
 - [Build with](#-build-with)
-- [My code environnement and utils](#-my-code-environnement-and-utils)
+- [My code environment and utils](#-my-code-environment-and-utils)
 - [Why this choice](#why-this-choice)
 - [Technical watch](#technical-watch)
 - [Biggest challenges for this project](#biggest-challenges-for-this-project)
@@ -42,7 +42,7 @@ I chose to use a Github to manage my code with a Kanban [here](https://github.co
 - [Jest](https://github.com/vuejs/vue-jest)
 - [Supertest](https://www.npmjs.com/package/supertest)
 
-## My code environnement and utils
+## My code environment and utils
 
 - VsCode
 - MacOs
