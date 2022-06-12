@@ -1,5 +1,5 @@
-const cheerio = require("cheerio");
-const axios = require("axios");
+import cheerio from "cheerio";
+import axios from "axios";
 
 const getCompanyDataFromWebsite = (req, res) => {
   const company = req.params.company;
@@ -29,4 +29,4 @@ const getCompanyDataFromWebsite = (req, res) => {
     .catch((error) => console.log(error));
 };
 
-module.exports = { getCompanyDataFromWebsite };
+export default getCompanyDataFromWebsite;
