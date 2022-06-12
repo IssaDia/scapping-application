@@ -1,13 +1,15 @@
-require("dotenv").config();
+import dotenv  from "dotenv";
+import express from "express";
 
-const express = require("express");
-const app = express();
+dotenv.config();
+
+const app:Express = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const {
   getCompanyDataFromWebsite,
-} = require("./utils/getCompanyDataFromWebsite");
+} = require("../utils/getCompanyDataFromWebsite");
 
 const port = 3000;
 
@@ -18,7 +20,7 @@ if (process.env.NODE_ENV !== "production") {
   app.use(cors());
 }
 
-app.get("/api/search/:company", (req, res) => {
+app.get("/api/search/:company", (req: Request, res: Response) => {
   getCompanyDataFromWebsite(req, res);
 });
 
