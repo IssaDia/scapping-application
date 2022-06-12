@@ -6,9 +6,10 @@
     "no-console": "off",
     "prettier/prettier": "error"
   },
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "sourceType": "module",
-    "ecmaVersion": "latest"
+    "ecmaVersion": 2018
   },
   "env": {
     "browser": true,
